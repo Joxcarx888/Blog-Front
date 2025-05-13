@@ -60,4 +60,31 @@
     color: #999;
     text-align: right;
   }
+
+  .filter-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  
+  .filter-bar select,
+  .filter-bar button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .filter-bar button {
+    background-color: #f9b27c; 
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .filter-bar button:hover {
+    background-color: #f89a4b;
+  }
+  
   

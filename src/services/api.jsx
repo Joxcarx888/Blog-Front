@@ -14,6 +14,15 @@ import axios from "axios";
     }
   };
 
+  export const listPostsByCategory = async () => {
+    try {
+      const response = await apiClient.get('post/:categoryName');
+      return response;
+    } catch (e) {
+      return { error: true, e };
+    }
+  };
+
   export const addComment = async (id, commentData) => {
     try {
       const response = await apiClient.post(`post/addcomment/${id}`, commentData);
