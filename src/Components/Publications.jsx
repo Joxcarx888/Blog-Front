@@ -1,9 +1,15 @@
 import { useListPublications } from "../shared/hooks";
 import { LoadingSpinner } from "../dashboard/loadingSpinner";
 import './Publications.css'; 
+import { useNavigate } from "react-router-dom";
 
 export const ListPublications = () => {
   const { publications, isLoading } = useListPublications();
+  const navigate = useNavigate();
+
+  const handleClick = (id) => {
+    navigate(`/publication/${id}`);
+  };
 
   return (
     <div className="list-publication-container">
@@ -13,11 +19,12 @@ export const ListPublications = () => {
         <LoadingSpinner />
       ) : (
         <div className="cards-grid">
-          {publications.map(({ _id, title, text, user, createdAt }) => (
-            <div key={_id} className="publication-card">
+          {publications.map(({ _id, title, text, user, category, createdAt }) => (
+            <div key={_id} className="publication-card" onClick={() => handleClick(_id)}>
               <div className="publication-title">{title}</div>
               <div className="publication-text">{text}</div>
               <div className="publication-author">Autor: {user}</div>
+              <div className="publication-category">Categoria: {category?.name}</div>
               <div className="publication-date">
                 {new Date(createdAt).toLocaleDateString()}
               </div>
@@ -28,6 +35,3 @@ export const ListPublications = () => {
     </div>
   );
 };
-
-
-  
