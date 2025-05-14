@@ -93,6 +93,54 @@
     display: flex;
     flex-direction: column-reverse;
   }
+  .delete-button {
+    background-color: #ffcccb; 
+    color: white;
+    font-size: 0.9rem; 
+    padding: 0.4rem 0.8rem; 
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem; 
+    transition: background-color 0.2s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #f99;
+  }
+  
+  .edit-button {
+    background-color: #aec6cf; 
+    color: white;
+    font-size: 0.9rem; 
+    padding: 0.4rem 0.8rem; 
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem; 
+    transition: background-color 0.2s ease;
+  }
+  
+  .edit-button:hover {
+    background-color: #8faebd;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Delius", cursive;
+  }
+  
+  p, .publication-text, .publication-category, .publication-author {
+    font-family: "Delius", cursive;
+  }
+  
+  button, .edit-button, .delete-button {
+    font-family: "Delius", cursive;
+  }
+
+  body {
+    background-color: #A3B9D1; 
+  }
+  
   
   
   

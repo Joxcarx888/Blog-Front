@@ -1,2 +1,5 @@
 export { useListPublications } from './useListPublications'
 export { useAddComment } from './useAddComment'
+export { usePublicationDetails } from './usePublicationDetails'
+export { useUpdateComment } from './useUpdateComment'
+export { useDeleteComment } from './useDeleteComment'

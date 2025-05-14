@@ -41,14 +41,15 @@ import axios from "axios";
     }
   };
   
-  export const updateComment = async (id, comment) => {
+  export const updateComment = async (id, commentData) => {
     try {
-      const response = await apiClient.put(`comments/${id}`, { comment });
+      const response = await apiClient.put(`comments/${id}`, commentData);
       return response.data;
     } catch (e) {
       return { error: true, e };
     }
   };
+  
   
   export const deleteComment = async (id) => {
     try {
